@@ -196,7 +196,7 @@ int main()
 
 
 
-    int t[10];
+    /*int t[10];
     int n,nbr,index,boite,boite2;
     printf("le nombre de que vou pouvez saisir : ");
     scanf("%d",&n);
@@ -219,15 +219,56 @@ int main()
                 t[i]=nbr;
                 t[i+1]=boite;
             }
-            else{
-                boite=t[i];
-                t[i+1]=t[i];
-            }
         }
         for(int j=0;j<=6;j++){
             printf("%d  ",t[j]);
         }
+    }*/
+
+
+    //tri croissant
+    /*int t[6];
+    printf("les valeures : \n");
+    for(int j=0;j<6;j++){
+        scanf("%d",&t[j]);
     }
+    int boite;
+    for(int i=0;i<5;i++){
+        for(int j=i+1;j<6;j++){
+            if(t[i]>t[j]){
+                boite=t[i];
+                t[i]=t[j];
+                t[j]=boite;
+            }
+        }
+    }
+    printf("le tableau triee : \n");
+    for(int i=0;i<6;i++){
+        printf("%d \n",t[i]);
+    }*/
+
+    int t[6];
+    printf("les valeures : \n");
+    for(int j=0;j<6;j++){
+        scanf("%d",&t[j]);
+    }
+    int boite;
+    for(int i=0;i<5;i++){
+        for(int j=i+1;j<6;j++){
+            if(t[i]<t[j]){
+                boite=t[i];
+                t[i]=t[j];
+                t[j]=boite;
+            }
+        }
+    }
+    printf("le tableau triee : \n");
+    for(int i=0;i<6;i++){
+        printf("%d \n",t[i]);
+    }
+
+
+
 
 
 
