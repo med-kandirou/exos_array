@@ -195,9 +195,46 @@ int main()
     printf("Max 2 : %d\n",max2);*/
 
 
-    int t[10]={3,7,9,10,54};
 
-    if(){}
+    int t[10];
+    int n,nbr,index,boite,boite2;
+    printf("le nombre de que vou pouvez saisir : ");
+    scanf("%d",&n);
+    printf("leS valeures : \n");
+    for(int j=0;j<n;j++){
+        scanf("%d",&t[j]);
+    }
+    if(n>=10){
+        printf("tableau plein \n");
+    }
+    else{
+        printf("le nombre : ");
+        scanf("%d",&nbr);
+        printf("l index : ");
+        scanf("%d",&index);
+
+        for(int i=index;i<=n;i++){
+            if(index==i){
+                boite=t[i];
+                t[i]=nbr;
+                t[i+1]=boite;
+            }
+            else{
+                boite=t[i];
+                t[i+1]=t[i];
+            }
+        }
+        for(int j=0;j<=6;j++){
+            printf("%d  ",t[j]);
+        }
+    }
+
+
+
+
+
+
+
 
 
 
