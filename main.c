@@ -1,8 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
+
+
+void max(int t[]){
+    int max=t[0];
+    for(int i=0;i<10;i++){
+        if(max<t[i]){
+            max=t[i];
+        }
+    }
+    printf("Max : %d",max);
+}
+void min(int t[]){
+    int min=t[0];
+    for(int i=0;i<10;i++){
+        if(min>t[i]){
+            min=t[i];
+        }
+    }
+    printf("min : %d ",min);
+}
+
+int* rev(int t[]){
+    int t2[10];
+    for(int i=0;i<10;i++){
+        t2[i]=t[5-i];
+    }
+    return t2;
+}
+
 int main()
 {
+    int t[10]={23,34,87,567,90,67,4,3,566,2};
+    min(t);
+    max(t);
+
+
+
+
+
+
+
+
     /*51
     float t[10];
     double s=0,p=1,m=0;
@@ -246,50 +288,6 @@ int main()
     for(int i=0;i<6;i++){
         printf("%d \n",t[i]);
     }*/
-
-    int t[6];
-    printf("les valeures : \n");
-    for(int j=0;j<6;j++){
-        scanf("%d",&t[j]);
-    }
-    int boite;
-    for(int i=0;i<5;i++){
-        for(int j=i+1;j<6;j++){
-            if(t[i]<t[j]){
-                boite=t[i];
-                t[i]=t[j];
-                t[j]=boite;
-            }
-        }
-    }
-    printf("le tableau triee : \n");
-    for(int i=0;i<6;i++){
-        printf("%d \n",t[i]);
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
