@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
-
-
 void max(int t[]){
     int max=t[0];
     for(int i=0;i<10;i++){
@@ -34,16 +30,6 @@ int* rev(int t[]){
 
 int main()
 {
-    int t[10]={23,34,87,567,90,67,4,3,566,2};
-    min(t);
-    max(t);
-
-
-
-
-
-
-
 
     /*51
     float t[10];
@@ -289,17 +275,49 @@ int main()
         printf("%d \n",t[i]);
     }*/
 
+    /*int t[10]={6,9,10,11,16,20,21,22,23,40};
+    int d=0;
+    int f=9;
+    int m=(d+f)/2;
+    int v=40;
+    if(t[m]>v){
+        for(int i=d;i<=m;i++){
+            if(t[i]==v){
+                printf("%d\n",i);
+            }
+        }
+    }
+    else{
+        for(int i=m;i<=f;i++){
+            if(t[i]==v){
+                printf("%d\n",i);
+            }
+        }
+    }*/
 
+    int t[10]={6,9,10,11,16,20,21,22,23,40};
+    int d=0;
+    int f=9;
+    int m=(d+f)/2;
+    int v;
+    printf("chercher un nombre :");
+    scanf("%d",&v);
+    while(t[m]!=v && f>d){
+        if(t[m]>v){
+            f=m-1;
+        }
+        else if(t[m]<v){
+            d=m+1;
+        }
+        m=(d+f)/2;
 
-
-
-
-
-
-
-
-
-
+    }
+    if(t[m]==v){
+        printf("%d",m);
+    }
+    else{
+        printf("introuvable");
+    }
 
 
     return 0;
